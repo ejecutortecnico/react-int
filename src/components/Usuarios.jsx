@@ -16,7 +16,7 @@ export default function Usuarios() {
     <div>
       <Navigation />
       <h3>Usuarios</h3>
-      <table className="table table-striped table-sm" style={{"width":"50%","margin-left":"25%","margin-rigth":"25%"}}>
+      <table className="table table-striped" style={{"width":"50%","margin-left":"25%","margin-rigth":"25%"}}>
         <thead className="table-primary">
             <tr><th>nombre</th><th>apellido</th><th>email</th><th>opciones</th></tr>
         </thead>
@@ -29,7 +29,7 @@ export default function Usuarios() {
             <td>{u.email}</td>
             <td> 
               <Link to={`/usuario/${u.idusuario}`}>Ver</Link>
-              <Link to={`/usuario/${u.idusuario}`}>Editar</Link>
+              <Link to={`/editar/${u.idusuario}`}>Editar</Link>
               <Link to={`/usuario/${u.idusuario}`}>Borrar</Link>
             </td>
           </tr>

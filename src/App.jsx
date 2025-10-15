@@ -8,6 +8,8 @@ import NotFound from './components/NotFound'
 import Producto from './components/Producto';
 import Usuarios from './components/Usuarios';
 import Usuario from './components/Usuario';
+import FormUsuario from './components/FormUsuario';
+import ActUsuario from './components/ActUsuario';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route path="/producto/:id" element=<Producto /> />
       <Route path="/usuarios" element=<Usuarios /> />
       <Route path="/usuario/:id" element=<Usuario /> />
+      <Route path="/editar/:id" element=<ActUsuario /> />
+      <Route path="/crearusuario" element=<FormUsuario /> />
       <Route path="*" element=<NotFound /> />
     </Routes>
   )
