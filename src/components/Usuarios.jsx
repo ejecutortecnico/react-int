@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../axios";
 import { Link, NavLink } from "react-router-dom";
+import Navigation from "./Navigation";
 
 export default function Usuarios() {
   const [usuarios, setUsuarios] = useState([]);
@@ -13,11 +14,13 @@ export default function Usuarios() {
 
   return (
     <div>
+      <Navigation />
       <h3>Usuarios</h3>
-      <table className="table">
+      <table className="table table-striped table-sm" style={{"width":"50%","margin-left":"25%","margin-rigth":"25%"}}>
         <thead className="table-primary">
             <tr><th>nombre</th><th>apellido</th><th>email</th><th>opciones</th></tr>
         </thead>
+        <tbody>
             {usuarios.map(
           u => 
           <tr> 
@@ -31,6 +34,10 @@ export default function Usuarios() {
             </td>
           </tr>
         )}
+        </tbody>
+        <tfoot>
+          <tr className="table-secundary"><td>tabla bootstrap</td></tr>
+        </tfoot>
       </table>
     </div>
   );
